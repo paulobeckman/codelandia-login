@@ -1,0 +1,85 @@
+:root {
+  --background: #FFFFFF;
+}
+
+@media(max-width: 1080px){
+  html{
+    font-size: 93.75%; /*15px*/
+  }
+}
+
+@media(max-width: 720px){
+  html{
+    font-size: 87.5%; /*14px*/
+  }
+}
+
+body, input, textarea, button {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background: var(--background);
+  -webkit-font-smoothing: antialiased; /*fonts nitidas no navegador chrome e derivados*/
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center; 
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+}
+
+.banner__image{
+  width: 400px;
+  height: 330px;
+  
+  margin: 0 auto;
+}
+
+.contents__header{
+  font-family: 'Merriweather', serif;
+  margin-bottom: 40px;
+}
+
+.contents__header-title{
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.contents__header-subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.contents__form{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.contents__form-label{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contents__form-input{
+  padding: 16px 20px;
+  border-radius: 5px;
+  border: 1px solid #E8E8E8;
+}
+
+.contents__form-label,
+.contents__form-input {
+  margin-bottom: 11px;
+}
+
+
+
