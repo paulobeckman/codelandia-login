@@ -1,5 +1,6 @@
 :root {
   --background: #FFFFFF;
+  --secondary-color: #1A202C;
 }
 
 @media(max-width: 1080px){
@@ -12,6 +13,10 @@
   html{
     font-size: 87.5%; /*14px*/
   }
+}
+
+button{
+  cursor: pointer;
 }
 
 body, input, textarea, button {
@@ -31,6 +36,9 @@ main {
 }
 
 .banner {
+  background: #F7FAFC;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -38,8 +46,14 @@ main {
 .banner__image{
   width: 400px;
   height: 330px;
-  
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+.contents {
+  max-width: 370px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .contents__header{
@@ -68,7 +82,7 @@ main {
 .contents__form-label{
   font-size: 1rem;
   font-weight: 400;
-  color: #1A202C;
+  color: var(--secondary-color);
 }
 
 .contents__form-input{
@@ -98,23 +112,83 @@ main {
   align-items: center;
 }
 
-.contents__form-footer-section-button {
+.contents__form-footer-section-button,
+.contents__footer-button {
   font-weight: 400;
   font-size: 0.87rem;
   text-decoration: none;
   color: #2B6CB0;
 }
 
+.contents__footer-button{
+  margin-left: 5px;
+}
+
+.contents__form-footer-section-button:hover,
+.contents__footer-button:hover {
+  text-decoration: underline;
+  transition: 0.3ms;
+}
+
 .contents__form-button-submit {
-  padding: 15px 152px;
+  height: 50px;
+  width: 100%;
+
   background: #04C45C;
   color: #FFFFFF;
   border-radius: 5px;
+  transition: 0.3ms;
+}
+
+.contents__form-button-submit:hover{
+  transition: 0.3ms;
+  filter: brightness(1.2);
 }
 
 .contents__form-button-submit.google{
-  height: 50px;
-  width: 350px;
-
   margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--secondary-color);
+}
+
+.contents__form-button-submit-icon{
+  margin-right: 11px;
+}
+
+.contents__footer{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.contents__footer-text{
+  margin: 50px auto;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media(max-width: 810px){
+  main {
+    grid-template-columns: 0.3fr 1fr;
+  }
+
+  .banner__image{
+    width: 200px;
+    height: 130px;
+    padding: 0 15px;
+  }
+}
+
+@media(max-width: 610px){
+  main{
+    display: flex;
+    justify-content: center;
+  }
+  .banner{
+    display: none;
+  }
 }

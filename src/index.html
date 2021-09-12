@@ -16,7 +16,7 @@
       <section class="banner">
         <img class="banner__image" src="../public/image/image.svg" alt="banner">
       </section>
-      <section>
+      <section class="login">
         <div class="contents">
           <header class="contents__header">
             <p class="contents__header-title">Bem vindo de volta</p>
@@ -31,7 +31,7 @@
 
             <div class="contents__form-footer">
               <section class="contents__form-footer-section">
-                <input type="radio" name="lembrar">
+                <input class="contents__form-footer-section-checkbox" type="checkbox" name="lembrar">
                 <label class="contents__form-label footer" for="checkbox">Lembre de mim</label>
               </section>
 
@@ -43,7 +43,11 @@
             <button class="contents__form-button-submit" type="submit">Entrar</button>
           </form>
 
-          <button class="contents__form-button-submit google">Ou faça login com o Google</button>
+          <div class="contents__footer">
+            <button class="contents__form-button-submit google"><img class="contents__form-button-submit-icon" src="../public/image/logo_google.png" alt="logo google"> Ou faça login com o Google</button>
+            <p class="contents__footer-text">Não tem uma conta?<a class="contents__footer-button" href="*">Cadastre-se</a></p>
+          </div>
+        
         </div>
       </section>
     </main>
